@@ -6,91 +6,185 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Sign up Form</title>
         <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css"/>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144 &display=swap");:root {
-                font-family: "Roboto Flex", sans-serif;
-            }
-            div.main {
-                height: 100vh;
-                width: 100vw;
-                display: flex;
-            }
+        <style>:root
+        {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-            div.image-section {
-                flex: 1 1.33 0;
-                display: flex;
-            }
+        }
 
-            .image-section > img {
-                width: 100%;
-            }
+        * {
+            box-sizing: border-box;
+        }
+        div.main {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
 
-            div.form-section {
-                flex: 1.33 0.77 0;
-                display: flex;
-                flex-direction: column;
-            }
+        div.image-section {
+            flex: 1 1.33 0;
+            display: flex;
+            position: relative;
 
-            h1 {
-                font-size: 1.8rem;
-            }
+        }
 
-            em {
-                margin-right: 8px;
-            }
+        .image-section > img {
+            width: 100%;
+        }
+
+        div.form-section {
+            flex: 1.33 0.77 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 77vw;
+
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        em {
+            margin-right: 8px;
+        }
 
 
-            form {
-                display: flex;
-                flex-direction: column;
-                flex-basis: 50%;
-                align-items: center;
+        div.heading {
+            padding: 4vw;
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        .logo > img {
+            height: 200px;
+        }
+
+        .logo>p{
+            color: whitesmoke;
+            
+        }
+
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 3rem;
+            align-content: space-around;
+            justify-content: space-around;
+            column-gap: 4vw;
+            row-gap: 2vw;
+            max-width: 70%;
+            box-shadow: 5rem;
+            box-shadow: 0 0 5px #ccc;
+            border-radius: 1rem;
+        }
+
+        label {
+            display: block;
+        }
+
+        
+        input,
+        button {
+            appearance: none;
+            border: solid 1px lightskyblue;
+            border-radius: 1rem;
+            padding: 12px;
+            
+        }
+
+        button:hover,input:focus{
+            box-shadow: 5px 5px 5px #ccc;
+        }
+
+
+        button {
+            margin-top: 5vh;
+
+        }
+
+
+        input:focus:valid {
+            border: solid 1px green;
+            background-color: lightgreen
+        }
+
+
+        input:required:focus:invalid {
+            border: solid 1px red;
+            background-color: lightcoral;
+        }
+
+        button:active{
+            background-color: aquamarine;
+            
+        }
+
+        .form-section>p{
+            
+            font-weight: bolder;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="image-section">
+            <img src="./test3.jpg" alt=""/>
+            <div class="logo">
+                <img src="./logo.png" alt="">
+                <p>THE ODIN PROJECT</p>
+            </div>
+        </div>
+        <div class="form-section">
+            <div class="heading">
+                <h2>
+                    This is not a real service. You need something like this in your
+                                                                                                                                                                                                                                                        life to help you realize your deepest dreams.<br/>
+                    Sign up
+                    <em>now</em>
+                    to get started.
+                </h2>
+                <h2>You
+                    <em>know</em>
+                    you want to.</h2>
+
+
+            </div>
+
+            <p>Let's get started!</p>
+            <form>
                 
-            }
+                <div>
+                    <label for="fname">FIRST NAME</label>
+                    <input type="text" id="fname" required></div>
+                <div>
+                    <label for="lname">LAST NAME</label>
+                    <input type="text"></div>
+                <div>
+                    <label for="">EMAIL</label>
+                    <input type="email" required></div>
+                <div>
+                    <label for="">TELEPHONE</label>
+                    <input type="tel" required></div>
+                <div>
+                    <label for="">PASSWORD</label>
+                    <input type="password" required></div>
+                <div>
+                    <label for="">CONFIRM PASSWORD</label>
+                    <input type="password" required></div>
 
-            
-            
-        </style>
-    </head>
-    <body>
-        <div class="main">
-            <div class="image-section">
-                <img src="./test.jpg" alt=""/>
-                <div class="logo"></div>
-            </div>
-            <div class="form-section">
-                <div class="heading">
-                    <h1>
-                        This is not a real service. You need something like this in your
-                                                                                                                                                                                    life to help you realize your deepest dreams.<br/>
-                        Sign up
-                        <em>now</em>
-                        to get started.
-                    </h1>
-                    <h1>You
-                        <em>know</em>
-                        you want to.</h1>
-
-                </div>
-                <h3>Let's get started</h3>
-                <form action="" method="get">
-
-                    <div>
-                        <label for="fname">FIRST NAME</label><input type="text" id="fname"/>
-                        <label for="lname">LAST NAME</label><input type="text" id="lname"/>
-                    </div>
-                    <div>
-                        <label for="email">EMAIL</label><input type="email" id="email"/>
-                        <label for="tel">TELEPHONE</label><input type="tel" id="tel"/>
-                    </div>
-                    <div>
-                        <label for="password">PASSWORD</label><input type="password" id="password"/>
-                        <label for="cpassword">CONFIRM PASSWORD</label><input type="password" id="cpassword"/>
-                    </form>
+            </form>
+            <button type="submit">REGISTER</button>
 
 
-                </div>
-            </div>
-        </body>
-    </body>
-</html></div></body></html>
+        </div>
+    </div>
+</body></html></body></html></div></body></html>
